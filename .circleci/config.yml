@@ -76,7 +76,6 @@ jobs:
           aws-secret-access-key: AWS_SECRET_KEY
           aws-region: AWS_REGION
       - eb/setup
-
       - checkout
       - run:
           name: Deploy App
