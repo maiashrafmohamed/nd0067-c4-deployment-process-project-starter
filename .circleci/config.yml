@@ -57,7 +57,6 @@ jobs:
           aws-access-key-id: AWS_ACCESS_KEY
           aws-secret-access-key: AWS_ACCESS_SECRET
           aws-region: AWS_REGION_NAME
-          aws_session_token: AWS_SESSION_TOKEN     
 
       - checkout
       - run:
