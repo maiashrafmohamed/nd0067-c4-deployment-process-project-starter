@@ -86,8 +86,8 @@ workflows:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
       - hold:
           filters:
             branches:
@@ -96,6 +96,8 @@ workflows:
           type: approval
           requires:
             - build
+            - test
+
       - deploy:
           context: aws
           requires:
