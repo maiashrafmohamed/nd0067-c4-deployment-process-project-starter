@@ -66,10 +66,6 @@ jobs:
             npm run frontend:deploy
             
 workflows:
-  aws-cli:
-    jobs:
-      - aws-cli-cred-setup:
-          context: aws
   udagram:
     jobs:
       - build
