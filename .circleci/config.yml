@@ -56,7 +56,6 @@ jobs:
       - run:
           name: unit test Front-End 
           command: |
-            npm run frontend:build
             npm run frontend:test
 
   # deploy step will run only after manual approval
