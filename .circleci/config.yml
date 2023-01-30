@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: circleci/node@5.0.2
-  # eb: circleci/aws-elastic-beanstalk@2.0.1
+  eb: circleci/aws-elastic-beanstalk@2.0.1
   aws-cli: circleci/aws-cli@3.1.1
   # different jobs are calles later in the workflows sections
 jobs:
@@ -71,7 +71,7 @@ jobs:
     steps:
       - node/install:
           node-version: '14.15' 
-      # - eb/setup
+      - eb/setup
       - aws-cli/setup:
           aws-access-key-id: AWS_ACCESS_KEY
           aws-secret-access-key: AWS_SECRET_KEY
@@ -84,6 +84,8 @@ jobs:
           command: |
             aws configure set aws_session_token "FwoGZXIvYXdzECwaDNjcHufkrqSOrT1oRyLVARo2qpbZm3UDC38SeoqXxOBuJ8SfrnEF0cjgCkPgdulcdJr9gNup1ljyuBF0B58E2zZBJ5YhxT5eMW6GihZPcki8frLjpjp4S2O6zcUCE2d1x4XfdlKX1bFZfXZ4gy/ct3hvAVUjk+dxqwnFx9OA4b7peb0kH3Sh545gR7angYMxa3HaOajCjy4A9uzrgoxHVHE7Czz1bD/bc5hoNxbaMSFKdEbEYIH/YcbWxX/Zwsm2W8PLXYNLy0AJ/n3zNV12Bi4ssIfMa4JfvO/PWAUcDRlwIQvjjyiEjeCeBjIt4DeNgR3Q3xxoDiIdR//ZdLtCgo7Nh9lSIAE0FtmJjnf0PY38xLO7T1S/4zu7" 
             npm run frontend:deploy
+            npm run api:deploy
+
             
 workflows:
   udagram:
