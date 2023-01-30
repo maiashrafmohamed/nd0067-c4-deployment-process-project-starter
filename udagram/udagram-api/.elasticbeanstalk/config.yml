@@ -2,12 +2,16 @@ branch-defaults:
   default:
     environment: udagram-udacity
     group_suffix: null
+  master:
+    environment: udagram-api-dev
 global:
   application_name: udagram-api
   branch: null
   default_ec2_keyname: null
   default_platform: Node.js 16
   default_region: us-east-1
+  deploy:
+    artifact: www/Archive.zip
   include_git_submodules: true
   instance_profile: null
   platform_name: null
@@ -16,6 +20,3 @@ global:
   repository: null
   sc: git
   workspace_type: Application
-  deploy:
-    artifact: www/Archive.zip
-    
