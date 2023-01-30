@@ -54,6 +54,10 @@ jobs:
           node-version: '14.15' 
       # - eb/setup
       - aws-cli/setup
+          aws-access-key-id: AWS_ACCESS_KEY
+          aws-secret-access-key: AWS_ACCESS_SECRET
+          aws-region: AWS_REGION_NAME
+
       - checkout
       - run:
           name: Deploy App
@@ -62,6 +66,10 @@ jobs:
             npm run frontend:deploy
             
 workflows:
+  aws-cli:
+    jobs:
+      - aws-cli-cred-setup:
+          context: aws
   udagram:
     jobs:
       - build
