@@ -71,14 +71,11 @@ jobs:
     steps:
       - node/install:
           node-version: '14.15' 
-      - eb/setup:
-          aws-access-key-id: AWS_ACCESS_KEY
-          aws-secret-access-key: AWS_SECRET_KEY
-          aws-region: AWS_REGION
       - aws-cli/setup:
           aws-access-key-id: AWS_ACCESS_KEY
           aws-secret-access-key: AWS_SECRET_KEY
           aws-region: AWS_REGION
+      - eb/setup
 
       - checkout
       - run:
