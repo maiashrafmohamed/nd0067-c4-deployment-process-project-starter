@@ -51,7 +51,8 @@ jobs:
     steps:
       # install node 
       - node/install:
-          node-version: '14.15'         
+          node-version: '14.15'  
+      - checkout
       - run:
           name: unit test Front-End 
           command: |
