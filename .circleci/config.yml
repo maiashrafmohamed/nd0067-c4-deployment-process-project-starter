@@ -34,6 +34,10 @@ jobs:
           name: Front-End Lint
           command: |
             npm run frontend:lint
+      - run:
+          name: Front-End test
+          command: |
+            npm run frontend:test
       # TODO: Build the frontend app
       - run:
           name: Front-End Build
@@ -84,9 +88,6 @@ workflows:
   udagram:
     jobs:
       - build
-      - test:
-          requires:
-            - build
       - hold:
           filters:
             branches:
@@ -95,8 +96,7 @@ workflows:
           type: approval
           requires:
             - build
-            - test
-
+            # - test
       - deploy:
           context: aws
           requires:
