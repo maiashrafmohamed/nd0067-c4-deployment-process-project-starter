@@ -100,6 +100,6 @@ workflows:
             - build
             # - test
       - deploy:
-          context: aws
+          context: aws-credentials
           requires:
             - hold
