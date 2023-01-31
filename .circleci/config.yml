@@ -34,7 +34,7 @@ jobs:
           name: Front-End Lint
           command: |
             npm run frontend:lint
-      # TODO: Build the frontend app
+      # Build the frontend app
       - run:
           name: Front-End Build
           command: |
@@ -81,7 +81,7 @@ jobs:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
-            aws configure set aws_session_token "FwoGZXIvYXdzECwaDNjcHufkrqSOrT1oRyLVARo2qpbZm3UDC38SeoqXxOBuJ8SfrnEF0cjgCkPgdulcdJr9gNup1ljyuBF0B58E2zZBJ5YhxT5eMW6GihZPcki8frLjpjp4S2O6zcUCE2d1x4XfdlKX1bFZfXZ4gy/ct3hvAVUjk+dxqwnFx9OA4b7peb0kH3Sh545gR7angYMxa3HaOajCjy4A9uzrgoxHVHE7Czz1bD/bc5hoNxbaMSFKdEbEYIH/YcbWxX/Zwsm2W8PLXYNLy0AJ/n3zNV12Bi4ssIfMa4JfvO/PWAUcDRlwIQvjjyiEjeCeBjIt4DeNgR3Q3xxoDiIdR//ZdLtCgo7Nh9lSIAE0FtmJjnf0PY38xLO7T1S/4zu7" 
+            aws configure set aws_session_token "FwoGZXIvYXdzEEEaDOKoLUOrhAG7UwQIgSLVAQ6IbZ2QeaFDsVpr+fAn452MsNGnEDjZ3Eum0uVNHxWaObGcTpDjepdwPb+ubif1DxmU2du8k0NNbg8fxOq5ZELxbqhmDVcvxce3SQ7Rusz6aJaJDztGrMaI5ElpElfDAdhrpisrT7YIQK5ZqvlftLo8veJQxUVnvVQtczWiALHC/mE5ZLLZnmx63dBe3ORCBebcroc38y60m+3llNPhXgYvXwSYfQJurefGu6/8Q/9vQEQMKM/uozRqszojU2dLT/gmZhpCML9hY2uIM8NDv5DZYnUztyjs5uSeBjIt4mGPkcJ7En+H2gdCZsIf/C6X/fJ6eJd8sdoE+eRreJeQwEGjVkGNruvEmtDh" 
             npm run api:deploy
 
             
