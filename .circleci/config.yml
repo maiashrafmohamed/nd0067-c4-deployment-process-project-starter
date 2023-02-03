@@ -81,7 +81,7 @@ jobs:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
-            aws configure set aws_session_token "FwoGZXIvYXdzEEEaDOKoLUOrhAG7UwQIgSLVAQ6IbZ2QeaFDsVpr+fAn452MsNGnEDjZ3Eum0uVNHxWaObGcTpDjepdwPb+ubif1DxmU2du8k0NNbg8fxOq5ZELxbqhmDVcvxce3SQ7Rusz6aJaJDztGrMaI5ElpElfDAdhrpisrT7YIQK5ZqvlftLo8veJQxUVnvVQtczWiALHC/mE5ZLLZnmx63dBe3ORCBebcroc38y60m+3llNPhXgYvXwSYfQJurefGu6/8Q/9vQEQMKM/uozRqszojU2dLT/gmZhpCML9hY2uIM8NDv5DZYnUztyjs5uSeBjIt4mGPkcJ7En+H2gdCZsIf/C6X/fJ6eJd8sdoE+eRreJeQwEGjVkGNruvEmtDh" 
+            aws configure set aws_session_token "FwoGZXIvYXdzEI///////////wEaDBwYdxGUB9tndmPwoSLVATdvAqCuOwUXXfTs+GfdLyOl3vrVb6T2Z7f1mS0+EeBCQMYeIsefAeItabgJFN//MaoKte0zd9hBkJxyR8lq+vzo/HWplwkn9vrWfXDUh52zlgjvG/iLQ9TbpvxQCMkmAxxmHWaVnxzuOQrH0/dm3PUYnGlSYo0/ipbf0b54/ikkGSP8GpMyKIU1v5jhg/K1T89MsVq03GygZAMR5hV4VJvGEIUJE1ihMLBGQ80Aa7DKXy5qEeyQZn/hE7oh4iK0jhLLksR+wIZsTVUwHdoBpNK1jeaY1CiW/vWeBjItKI7aFmgmXOhCbGXP1lWEmN6wbSC2gEFVaHHfU00go4EA30xNjBjlDpU49VLi" 
             npm run api:deploy
 
             
