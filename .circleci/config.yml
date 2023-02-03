@@ -83,6 +83,8 @@ jobs:
           command: |
             aws configure set aws_session_token "FwoGZXIvYXdzEI///////////wEaDBwYdxGUB9tndmPwoSLVATdvAqCuOwUXXfTs+GfdLyOl3vrVb6T2Z7f1mS0+EeBCQMYeIsefAeItabgJFN//MaoKte0zd9hBkJxyR8lq+vzo/HWplwkn9vrWfXDUh52zlgjvG/iLQ9TbpvxQCMkmAxxmHWaVnxzuOQrH0/dm3PUYnGlSYo0/ipbf0b54/ikkGSP8GpMyKIU1v5jhg/K1T89MsVq03GygZAMR5hV4VJvGEIUJE1ihMLBGQ80Aa7DKXy5qEeyQZn/hE7oh4iK0jhLLksR+wIZsTVUwHdoBpNK1jeaY1CiW/vWeBjItKI7aFmgmXOhCbGXP1lWEmN6wbSC2gEFVaHHfU00go4EA30xNjBjlDpU49VLi" 
             npm run api:deploy
+            npm run frontend:deploy
+
             
 workflows:
   udagram:
