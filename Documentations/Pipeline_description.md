@@ -3,4 +3,6 @@
 
 ### Diagram:
 
-![pipeline](./Diagrams/pipelineDiagram.PNG)
+![pipeline](../Diagrams/pipelineDiagram.PNG)
+
+
