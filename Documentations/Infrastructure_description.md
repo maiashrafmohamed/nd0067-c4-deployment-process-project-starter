@@ -1,11 +1,16 @@
 # Udagaram Infrastructure
 
 
+
 FrontEnd: Angular
 
 Backend: Nodejs and express
 
 Database: Postgress
+
+### Diagram
+
+![pipeline](../Diagrams/Architecture%20diagram.PNG)
 
 
 #### AWS services:
