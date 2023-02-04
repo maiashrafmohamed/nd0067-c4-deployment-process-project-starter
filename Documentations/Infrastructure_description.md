@@ -8,7 +8,7 @@ Backend: Nodejs and express
 
 Database: Postgress
 
-### Diagram
+### Flow Diagram
 
 ![pipeline](../Diagrams/Architecture%20diagram.PNG)
 

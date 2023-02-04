@@ -13,7 +13,7 @@ jobs:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15-browsers"
     steps:
-      # install node and checkout code
+      # install node and checkout code and install browser tool chrome for unit test
       - node/install:
           node-version: '14.15' 
 
@@ -39,14 +39,13 @@ jobs:
       - run:
           name: Front-End Lint
           command: |
-            npm run frontend:lint
-
+            npm run frontend:lint            
       - run:
           command: |
             google-chrome --version
             chromedriver --version
           name: Check install
-      
+      # Test the frontend      
       - run:
           name: Front-End test
           command: |
@@ -63,25 +62,12 @@ jobs:
           name: API Build
           command: |
             npm run api:build
-  test:
-    docker:
-    # the base image can run most needed actions with orbs
-    - image: "cimg/node:14.15"
-    steps:
-      # install node 
-      - node/install:
-          node-version: '14.15'  
-      - checkout
-      - run:
-          name: unit test Front-End 
-          command: |
-            npm run frontend:test
 
   # deploy step will run only after manual approval
   deploy:
     docker:
       - image: "cimg/base:stable"
-      # more setup needed for aws, node, elastic beanstalk
+      # setup for aws, node, elastic beanstalk
     steps:
       - node/install:
           node-version: '14.15' 
@@ -91,6 +77,8 @@ jobs:
           aws-region: AWS_DEFAULT_REGION
       - eb/setup
       - checkout
+      # Deploy backend on EB 
+      # Deploy frontend on S3
       - run:
           name: Deploy App
           command: |
@@ -110,7 +98,6 @@ workflows:
           type: approval
           requires:
             - build
-            # - test
       - deploy:
           context: aws-credentials
           requires:
