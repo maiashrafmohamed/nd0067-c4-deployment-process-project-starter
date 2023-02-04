@@ -14,6 +14,8 @@ jobs:
       # install node and checkout code
       - node/install:
           node-version: '14.15'         
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
       - checkout
       # Use root level package.json to install dependencies in the frontend app
       - run:
@@ -34,15 +36,23 @@ jobs:
           name: Front-End Lint
           command: |
             npm run frontend:lint
+
+      - run:
+          command: |
+            google-chrome --version
+            chromedriver --version
+          name: Check install
+      
+      - run:
+          name: Front-End test
+          command: |
+            npm run frontend:test
       # Build the frontend app
       - run:
           name: Front-End Build
           command: |
             npm run frontend:build
-      - run:
-          name: Front-End test
-          command: |
-            echo "TODO: Build the backend API"
+
 
       # Build the backend API      
       - run:
@@ -79,7 +89,6 @@ jobs:
       - checkout
       - run:
           name: Deploy App
-          # TODO: Install, build, deploy in both apps
           command: |
             aws configure set aws_session_token "FwoGZXIvYXdzEI///////////wEaDBwYdxGUB9tndmPwoSLVATdvAqCuOwUXXfTs+GfdLyOl3vrVb6T2Z7f1mS0+EeBCQMYeIsefAeItabgJFN//MaoKte0zd9hBkJxyR8lq+vzo/HWplwkn9vrWfXDUh52zlgjvG/iLQ9TbpvxQCMkmAxxmHWaVnxzuOQrH0/dm3PUYnGlSYo0/ipbf0b54/ikkGSP8GpMyKIU1v5jhg/K1T89MsVq03GygZAMR5hV4VJvGEIUJE1ihMLBGQ80Aa7DKXy5qEeyQZn/hE7oh4iK0jhLLksR+wIZsTVUwHdoBpNK1jeaY1CiW/vWeBjItKI7aFmgmXOhCbGXP1lWEmN6wbSC2gEFVaHHfU00go4EA30xNjBjlDpU49VLi" 
             npm run api:deploy
