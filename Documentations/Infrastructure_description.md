@@ -1,15 +1,14 @@
 # Udagaram Infrastructure
 
----
 
-Front end: Angular
+FrontEnd: Angular
 
 Backend: Nodejs and express
 
 Database: Postgress
 
 
-#### aws services: 
+#### AWS services:
 
 Elastic beanstlck --> for Hosting backend
 
