@@ -3,4 +3,4 @@
 
 ### Diagram:
 
-(./Diagrams/pipelineDiagram.PNG)
+![pipeline](./Diagrams/pipelineDiagram.PNG)
